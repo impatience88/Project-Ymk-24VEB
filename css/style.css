@@ -1,3 +1,5 @@
+/* Основные настройки */
+
 :root {
     --portal-blue: #1264d8;
     --portal-blue-dark: #0c438f;
@@ -10,66 +12,164 @@ body {
     font-family: Arial, sans-serif;
 }
 
+
+/* Шапка сайта */
+
 .site-navbar {
     background-color: #202833;
 }
 
+.navbar-brand {
+    font-size: 21px;
+}
+
+
+/* Главный блок */
+
 .hero-section {
-    color: #fff;
-    background: linear-gradient(120deg, var(--portal-blue-dark), var(--portal-blue));
+    color: white;
+    background: linear-gradient(
+        120deg,
+        var(--portal-blue-dark),
+        var(--portal-blue)
+    );
 }
 
 .hero-label,
 .section-kicker {
     color: #74b6ff;
-    font-size: .82rem;
+    font-size: 13px;
     font-weight: 700;
-    letter-spacing: .08em;
+    letter-spacing: 1px;
     text-transform: uppercase;
 }
 
 .hero-section .lead {
     max-width: 670px;
-    color: rgba(255, 255, 255, .88);
+    color: rgba(255, 255, 255, 0.9);
 }
 
 .hero-note {
     color: var(--portal-ink);
-    background: #fff;
-    border-radius: 1rem;
-    box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, .14);
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
+
+/* Карточки преимуществ */
+
 .feature-card {
+    height: 100%;
     border: 1px solid #e7ebf0;
-    border-radius: .9rem;
-    box-shadow: 0 .25rem 1rem rgba(20, 40, 70, .04);
-    transition: transform .2s ease, box-shadow .2s ease;
+    border-radius: 14px;
+    box-shadow: 0 4px 16px rgba(20, 40, 70, 0.04);
+    transition: 0.2s;
 }
 
 .feature-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 .6rem 1.5rem rgba(20, 40, 70, .09);
+    box-shadow: 0 8px 24px rgba(20, 40, 70, 0.1);
 }
 
 .feature-number {
     color: var(--portal-blue);
-    font-size: .9rem;
-    font-weight: 700;
+    font-size: 15px;
+    font-weight: bold;
 }
 
+
+/* Блок с переходом к курсам */
+
+.courses-preview {
+    background-color: #f5f7fa;
+}
+
+
+/* Отзывы */
+
+.review-card {
+    max-width: 750px;
+    min-height: 230px;
+    padding: 35px;
+    margin-bottom: 50px;
+    text-align: center;
+    background-color: #f5f7fa;
+    border: 1px solid #e5eaf0;
+    border-radius: 16px;
+}
+
+.review-stars {
+    color: #e5a400;
+    font-weight: bold;
+}
+
+.review-text {
+    color: #555f6c;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 7%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: var(--portal-blue);
+    border-radius: 50%;
+    padding: 15px;
+}
+
+.carousel-indicators {
+    bottom: 0;
+    margin-bottom: 0;
+}
+
+.carousel-indicators button {
+    background-color: var(--portal-blue);
+}
+
+
+/* Подвал сайта */
+
 .site-footer {
-    color: #fff;
+    color: white;
     background-color: #202833;
 }
 
-@media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
-        scroll-behavior: auto !important;
-        transition-duration: .01ms !important;
-        animation-duration: .01ms !important;
-        animation-iteration-count: 1 !important;
+.footer-link {
+    display: inline-block;
+    margin-bottom: 7px;
+    color: #b8c4d2;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+
+/* Мобильная версия */
+
+@media (max-width: 576px) {
+
+    .hero-section h1 {
+        font-size: 32px;
     }
+
+    .hero-section .lead {
+        font-size: 17px;
+    }
+
+    .review-card {
+        padding: 25px 20px;
+    }
+
+    .review-text {
+        font-size: 16px;
+    }
+
 }

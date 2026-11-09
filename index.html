@@ -1,115 +1,515 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Языковой портал - курсы иностранных языков">
-    <title>Языковой портал</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Языковой портал - школа иностранных языков</title>
+
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+    <!-- Собственные стили -->
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
+
+    <!-- Шапка сайта -->
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark site-navbar">
             <div class="container">
-                <a class="navbar-brand fw-semibold" href="index.html">Языковой портал</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#mainNavbar" aria-controls="mainNavbar"
-                    aria-expanded="false" aria-label="Открыть меню">
+
+                <a class="navbar-brand fw-bold" href="index.html">
+                    Языковой портал
+                </a>
+
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mainNavbar">
+
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
                 <div class="collapse navbar-collapse" id="mainNavbar">
-                    <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Главная</a></li>
-                        <li class="nav-item"><a class="nav-link" href="courses.html">Курсы</a></li>
-                        <li class="nav-item"><a class="nav-link" href="signup.html">Бесплатный урок</a></li>
-                        <li class="nav-item ms-lg-2"><a class="btn btn-light btn-sm px-3" href="signup.html">Записаться</a></li>
+
+                    <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">
+                                Главная
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="courses.html">
+                                Курсы
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#reviews">
+                                Отзывы
+                            </a>
+                        </li>
+
+                        <li class="nav-item ms-lg-3">
+                            <a class="btn btn-light px-3" href="signup.html">
+                                Записаться
+                            </a>
+                        </li>
+
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
 
+
+    <!-- Главный блок -->
     <main>
+
         <section class="hero-section">
             <div class="container py-5">
+
                 <div class="row align-items-center g-4 py-lg-4">
+
                     <div class="col-lg-8">
-                        <p class="hero-label mb-3">Школа иностранных языков</p>
-                        <h1 class="display-4 fw-bold mb-3">Открой для себя новые возможности</h1>
-                        <p class="lead mb-4">Изучай иностранные языки с преподавателями и двигайся к своей цели в удобном темпе.</p>
-                        <div class="d-flex flex-wrap gap-2">
-                            <a class="btn btn-light btn-lg" href="signup.html">Записаться на бесплатный урок</a>
-                            <a class="btn btn-outline-light btn-lg" href="courses.html">Посмотреть курсы</a>
-                        </div>
+
+                        <p class="hero-label">
+                            Школа иностранных языков
+                        </p>
+
+                        <h1 class="display-4 fw-bold mb-3">
+                            Изучай языки. Открывай новые возможности.
+                        </h1>
+
+                        <p class="lead mb-4">
+                            Учись общаться на иностранных языках,
+                            путешествуй и развивайся вместе с нами.
+                        </p>
+
+                        <a href="signup.html" class="btn btn-light btn-lg me-2 mb-2">
+                            Записаться на бесплатный урок
+                        </a>
+
+                        <a href="courses.html"
+                            class="btn btn-outline-light btn-lg mb-2">
+                            Наши курсы
+                        </a>
+
                     </div>
+
                     <div class="col-lg-4">
+
                         <div class="hero-note p-4">
-                            <div class="small text-uppercase fw-semibold mb-2">Начни с простого</div>
-                            <p class="mb-0">Выбери язык, познакомься с преподавателем и составь удобный план обучения.</p>
+                            <h2 class="h5 fw-bold">
+                                Начни с простого
+                            </h2>
+
+                            <p class="mb-0">
+                                Выбери интересующий язык, познакомься
+                                с преподавателем и начни обучение
+                                в удобном для тебя темпе.
+                            </p>
                         </div>
+
                     </div>
+
                 </div>
             </div>
         </section>
 
+
+        <!-- Преимущества школы -->
         <section class="py-5">
+
             <div class="container">
-                <div class="text-center mb-4">
-                    <p class="section-kicker mb-2">Для учёбы и жизни</p>
-                    <h2 class="h1 mb-2">Почему выбирают нас</h2>
-                    <p class="text-secondary mb-0">Небольшие группы, опытные преподаватели и понятные условия.</p>
+
+                <div class="text-center mb-5">
+
+                    <p class="section-kicker">
+                        Для учёбы и жизни
+                    </p>
+
+                    <h2 class="h1">
+                        Почему выбирают нас
+                    </h2>
+
+                    <p class="text-secondary">
+                        Помогаем изучать иностранные языки
+                        без лишних сложностей.
+                    </p>
+
                 </div>
-                <div class="row g-3 g-lg-4">
+
+
+                <div class="row g-4">
+
                     <div class="col-md-6 col-lg-4">
-                        <article class="card feature-card h-100">
+
+                        <div class="card feature-card h-100">
                             <div class="card-body p-4">
-                                <div class="feature-number mb-3">01</div>
-                                <h3 class="h5">Опытные преподаватели</h3>
-                                <p class="text-secondary mb-0">Занятия проводят квалифицированные педагоги, в том числе с опытом работы за рубежом.</p>
+
+                                <div class="feature-number mb-3">
+                                    01
+                                </div>
+
+                                <h3 class="h5">
+                                    Опытные преподаватели
+                                </h3>
+
+                                <p class="text-secondary mb-0">
+                                    Наши курсы ведут квалифицированные
+                                    педагоги. Многие имеют опыт работы
+                                    за рубежом или являются носителями языка.
+                                </p>
+
                             </div>
-                        </article>
+                        </div>
+
                     </div>
+
+
                     <div class="col-md-6 col-lg-4">
-                        <article class="card feature-card h-100">
+
+                        <div class="card feature-card h-100">
                             <div class="card-body p-4">
-                                <div class="feature-number mb-3">02</div>
-                                <h3 class="h5">Удобный график</h3>
-                                <p class="text-secondary mb-0">Можно заниматься в группе из 6-8 человек или выбрать индивидуальные занятия.</p>
+
+                                <div class="feature-number mb-3">
+                                    02
+                                </div>
+
+                                <h3 class="h5">
+                                    Удобный график
+                                </h3>
+
+                                <p class="text-secondary mb-0">
+                                    Можно заниматься в небольших группах
+                                    по 6-8 человек или выбрать
+                                    индивидуальные занятия.
+                                </p>
+
                             </div>
-                        </article>
+                        </div>
+
                     </div>
+
+
                     <div class="col-md-6 col-lg-4">
-                        <article class="card feature-card h-100">
+
+                        <div class="card feature-card h-100">
                             <div class="card-body p-4">
-                                <div class="feature-number mb-3">03</div>
-                                <h3 class="h5">Понятная стоимость</h3>
-                                <p class="text-secondary mb-0">Без скрытых платежей. Доступны разные тарифы и система скидок.</p>
+
+                                <div class="feature-number mb-3">
+                                    03
+                                </div>
+
+                                <h3 class="h5">
+                                    Понятная стоимость
+                                </h3>
+
+                                <p class="text-secondary mb-0">
+                                    Никаких скрытых платежей.
+                                    Доступны разные тарифы
+                                    и система скидок.
+                                </p>
+
                             </div>
-                        </article>
+                        </div>
+
                     </div>
+
                 </div>
+
             </div>
+
         </section>
 
-        <section class="py-5 bg-light">
+
+        <!-- Ссылка на курсы -->
+        <section class="courses-preview py-5">
+
             <div class="container text-center">
-                <h2 class="h3 mb-2">Выбери подходящий курс</h2>
-                <p class="text-secondary mb-4">На следующем этапе здесь появятся карточки всех четырёх направлений.</p>
-                <a href="courses.html" class="btn btn-primary px-4">Перейти к курсам</a>
+
+                <h2 class="h2 mb-3">
+                    Выбери подходящий курс
+                </h2>
+
+                <p class="text-secondary mb-4">
+                    Английский, китайский, итальянский
+                    и испанский языки.
+                </p>
+
+                <a href="courses.html" class="btn btn-primary btn-lg px-4">
+                    Посмотреть курсы
+                </a>
+
             </div>
+
         </section>
+
+
+        <!-- Отзывы -->
+        <section class="py-5" id="reviews">
+
+            <div class="container">
+
+                <div class="text-center mb-5">
+
+                    <p class="section-kicker">
+                        Мнение учеников
+                    </p>
+
+                    <h2 class="h1">
+                        Отзывы наших учеников
+                    </h2>
+
+                </div>
+
+
+                <div id="reviewsCarousel"
+                    class="carousel slide"
+                    data-bs-ride="carousel"
+                    data-bs-interval="6000">
+
+                    <div class="carousel-inner">
+
+
+                        <!-- Первый отзыв -->
+                        <div class="carousel-item active">
+
+                            <div class="review-card mx-auto">
+
+                                <div class="review-stars mb-3">
+                                    5 из 5
+                                </div>
+
+                                <p class="review-text">
+                                    Давно хотела выучить английский,
+                                    но постоянно откладывала.
+                                    Занятия проходят интересно,
+                                    а преподаватель всё хорошо объясняет.
+                                </p>
+
+                                <h3 class="h5 mb-1">
+                                    Анна
+                                </h3>
+
+                                <p class="text-secondary mb-0">
+                                    Ученица курса английского языка
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Второй отзыв -->
+                        <div class="carousel-item">
+
+                            <div class="review-card mx-auto">
+
+                                <div class="review-stars mb-3">
+                                    5 из 5
+                                </div>
+
+                                <p class="review-text">
+                                    Нравится небольшой размер группы.
+                                    Преподаватель уделяет внимание каждому,
+                                    поэтому материал усваивается быстрее.
+                                </p>
+
+                                <h3 class="h5 mb-1">
+                                    Максим
+                                </h3>
+
+                                <p class="text-secondary mb-0">
+                                    Ученик курса китайского языка
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Третий отзыв -->
+                        <div class="carousel-item">
+
+                            <div class="review-card mx-auto">
+
+                                <div class="review-stars mb-3">
+                                    5 из 5
+                                </div>
+
+                                <p class="review-text">
+                                    Выбрала индивидуальные занятия.
+                                    Получается совмещать обучение
+                                    с работой, а прогресс уже заметен.
+                                </p>
+
+                                <h3 class="h5 mb-1">
+                                    Елена
+                                </h3>
+
+                                <p class="text-secondary mb-0">
+                                    Ученица курса испанского языка
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Кнопки переключения -->
+                    <button class="carousel-control-prev"
+                        type="button"
+                        data-bs-target="#reviewsCarousel"
+                        data-bs-slide="prev">
+
+                        <span class="carousel-control-prev-icon"
+                            aria-hidden="true"></span>
+
+                        <span class="visually-hidden">
+                            Предыдущий отзыв
+                        </span>
+
+                    </button>
+
+
+                    <button class="carousel-control-next"
+                        type="button"
+                        data-bs-target="#reviewsCarousel"
+                        data-bs-slide="next">
+
+                        <span class="carousel-control-next-icon"
+                            aria-hidden="true"></span>
+
+                        <span class="visually-hidden">
+                            Следующий отзыв
+                        </span>
+
+                    </button>
+
+
+                    <!-- Индикаторы -->
+                    <div class="carousel-indicators">
+
+                        <button type="button"
+                            data-bs-target="#reviewsCarousel"
+                            data-bs-slide-to="0"
+                            class="active"
+                            aria-current="true"
+                            aria-label="Отзыв 1">
+                        </button>
+
+                        <button type="button"
+                            data-bs-target="#reviewsCarousel"
+                            data-bs-slide-to="1"
+                            aria-label="Отзыв 2">
+                        </button>
+
+                        <button type="button"
+                            data-bs-target="#reviewsCarousel"
+                            data-bs-slide-to="2"
+                            aria-label="Отзыв 3">
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
     </main>
 
+
+    <!-- Подвал сайта -->
     <footer class="site-footer py-4">
-        <div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
-            <span>Языковой портал</span>
-            <span class="text-white-50">Учимся общаться без границ</span>
-            <span class="text-white-50">© <span id="currentYear"></span></span>
+
+        <div class="container">
+
+            <div class="row g-4">
+
+                <div class="col-md-4">
+
+                    <h3 class="h5">
+                        Языковой портал
+                    </h3>
+
+                    <p class="text-white-50 mb-0">
+                        Учимся общаться без границ.
+                    </p>
+
+                </div>
+
+
+                <div class="col-md-4">
+
+                    <h3 class="h5">
+                        Контакты
+                    </h3>
+
+                    <p class="text-white-50 mb-1">
+                        Адрес: г. Москва, ул. Примерная, 10
+                    </p>
+
+                    <p class="text-white-50 mb-1">
+                        Телефон: +7 (900) 000-00-00
+                    </p>
+
+                    <p class="text-white-50 mb-0">
+                        Email: info@example.com
+                    </p>
+
+                </div>
+
+
+                <div class="col-md-4">
+
+                    <h3 class="h5">
+                        Информация
+                    </h3>
+
+                    <a href="courses.html" class="footer-link">
+                        Наши курсы
+                    </a>
+
+                    <br>
+
+                    <a href="signup.html" class="footer-link">
+                        Запись на бесплатный урок
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <hr class="border-secondary my-4">
+
+            <div class="text-center text-white-50">
+
+                © <span id="currentYear"></span>
+                Языковой портал. Все права защищены.
+
+            </div>
+
         </div>
+
     </footer>
 
+
+    <!-- Bootstrap JavaScript -->
     <script src="bootstrap/js/bootstrap.bundle.min.js" defer></script>
+
+    <!-- Собственный JavaScript -->
     <script src="js/main.js" defer></script>
+
 </body>
 </html>
