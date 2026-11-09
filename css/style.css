@@ -1,0 +1,75 @@
+:root {
+    --portal-blue: #1264d8;
+    --portal-blue-dark: #0c438f;
+    --portal-ink: #202833;
+    --portal-muted: #647080;
+}
+
+body {
+    color: var(--portal-ink);
+    font-family: Arial, sans-serif;
+}
+
+.site-navbar {
+    background-color: #202833;
+}
+
+.hero-section {
+    color: #fff;
+    background: linear-gradient(120deg, var(--portal-blue-dark), var(--portal-blue));
+}
+
+.hero-label,
+.section-kicker {
+    color: #74b6ff;
+    font-size: .82rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.hero-section .lead {
+    max-width: 670px;
+    color: rgba(255, 255, 255, .88);
+}
+
+.hero-note {
+    color: var(--portal-ink);
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, .14);
+}
+
+.feature-card {
+    border: 1px solid #e7ebf0;
+    border-radius: .9rem;
+    box-shadow: 0 .25rem 1rem rgba(20, 40, 70, .04);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 .6rem 1.5rem rgba(20, 40, 70, .09);
+}
+
+.feature-number {
+    color: var(--portal-blue);
+    font-size: .9rem;
+    font-weight: 700;
+}
+
+.site-footer {
+    color: #fff;
+    background-color: #202833;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}
