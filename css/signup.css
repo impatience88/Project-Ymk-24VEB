@@ -1,0 +1,79 @@
+/* Стили страницы записи */
+
+.signup-heading {
+    background-color: #f4f7fb;
+}
+
+.signup-card,
+.signup-info-card,
+.signup-contact {
+    background-color: #ffffff;
+    border: 1px solid #e5eaf0;
+    border-radius: 16px;
+    box-shadow: 0 8px 28px rgba(20, 40, 70, 0.06);
+}
+
+.signup-card .form-label {
+    font-weight: 600;
+}
+
+.signup-card .form-control,
+.signup-card .form-select {
+    border-color: #d8e0e9;
+}
+
+.signup-card .form-control:focus,
+.signup-card .form-select:focus {
+    border-color: #75a9f5;
+    box-shadow: 0 0 0 0.2rem rgba(18, 100, 216, 0.12);
+}
+
+.signup-info-card {
+    background-color: #f8faff;
+}
+
+.signup-step:last-child {
+    margin-bottom: 0 !important;
+}
+
+.step-number {
+    display: inline-flex;
+    flex: 0 0 36px;
+    width: 36px;
+    height: 36px;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    background-color: #1264d8;
+    border-radius: 50%;
+    font-weight: 700;
+}
+
+.signup-contact a,
+.footer-brand {
+    color: #1264d8;
+    text-decoration: none;
+}
+
+.signup-contact a:hover {
+    text-decoration: underline;
+}
+
+.footer-brand {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.footer-brand:hover {
+    color: #dceaff;
+}
+
+@media (max-width: 575.98px) {
+    .signup-card {
+        padding: 24px !important;
+    }
+
+    .signup-heading h1 {
+        font-size: 2rem;
+    }
+}

@@ -1,33 +1,240 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Запись на бесплатный пробный урок в школе Языковой портал">
     <title>Запись на бесплатный урок - Языковой портал</title>
+
+    <!-- Bootstrap 5.3.3 -->
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+    <!-- Общие стили сайта -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Стили страницы записи -->
+    <link rel="stylesheet" href="css/signup.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark site-navbar">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark site-navbar">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="index.html">Языковой портал</a>
+
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                    aria-controls="mainNavbar" aria-expanded="false"
+                    aria-label="Открыть меню">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="mainNavbar">
+                    <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Главная</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="courses.html">Курсы</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="signup.html">Бесплатный урок</a>
+                        </li>
+                        <li class="nav-item ms-lg-2">
+                            <a class="btn btn-light px-3" href="signup.html">Записаться</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="signup-heading py-5">
+            <div class="container">
+                <nav aria-label="Навигация по сайту">
+                    <ol class="breadcrumb mb-3">
+                        <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Бесплатный урок</li>
+                    </ol>
+                </nav>
+
+                <p class="section-kicker mb-2">Первое занятие</p>
+                <h1 class="display-5 fw-bold mb-3">Запишись на бесплатный урок</h1>
+                <p class="lead text-secondary mb-0">
+                    Оставь свои данные и выбери язык. Мы свяжемся с тобой,
+                    чтобы договориться о времени пробного занятия.
+                </p>
+            </div>
+        </section>
+
+        <section class="py-5">
+            <div class="container">
+                <div class="row g-4 g-lg-5 align-items-start">
+                    <div class="col-lg-7">
+                        <div class="signup-card p-4 p-md-5">
+                            <h2 class="h3 mb-2">Заявка на бесплатный урок</h2>
+                            <p class="text-secondary mb-4">
+                                Заполни все поля. Поля со звёздочкой обязательны.
+                            </p>
+
+                            <form id="signupForm" class="needs-validation" novalidate>
+                                <div class="mb-3">
+                                    <label for="fullName" class="form-label">ФИО <span class="text-danger">*</span></label>
+                                    <input
+                                        type="text"
+                                        class="form-control form-control-lg"
+                                        id="fullName"
+                                        name="fullName"
+                                        placeholder="Иванов Иван Иванович"
+                                        autocomplete="name"
+                                        pattern="[А-Яа-яЁё]+(\s+[А-Яа-яЁё]+){1,2}"
+                                        minlength="3"
+                                        required
+                                        aria-describedby="fullNameHelp fullNameError">
+                                    <div class="form-text" id="fullNameHelp">Используй кириллицу и пробелы. Можно указать фамилию, имя и отчество.</div>
+                                    <div class="invalid-feedback" id="fullNameError">
+                                        Введи ФИО кириллицей. Нужно указать минимум фамилию и имя.
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="phone" class="form-label">Телефон <span class="text-danger">*</span></label>
+                                    <input
+                                        type="tel"
+                                        class="form-control form-control-lg"
+                                        id="phone"
+                                        name="phone"
+                                        placeholder="+7(900)-000-00-00"
+                                        inputmode="tel"
+                                        autocomplete="tel"
+                                        maxlength="17"
+                                        pattern="\+7\([0-9]{3}\)-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+                                        required
+                                        aria-describedby="phoneHelp phoneError">
+                                    <div class="form-text" id="phoneHelp">Номер будет автоматически оформляться по нужному шаблону.</div>
+                                    <div class="invalid-feedback" id="phoneError">
+                                        Введи номер полностью в формате +7(XXX)-XXX-XX-XX.
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Электронная почта <span class="text-danger">*</span></label>
+                                    <input
+                                        type="email"
+                                        class="form-control form-control-lg"
+                                        id="email"
+                                        name="email"
+                                        placeholder="name@example.com"
+                                        autocomplete="email"
+                                        required
+                                        aria-describedby="emailError">
+                                    <div class="invalid-feedback" id="emailError">
+                                        Введи адрес электронной почты в правильном формате.
+                                    </div>
+                                </div>
+
+                                <div class="mb-4">
+                                    <label for="course" class="form-label">Курс <span class="text-danger">*</span></label>
+                                    <select class="form-select form-select-lg" id="course" name="course" required>
+                                        <option value="" selected disabled>Выбери курс</option>
+                                        <option value="english">Английский язык</option>
+                                        <option value="chinese">Китайский язык</option>
+                                        <option value="italian">Итальянский язык</option>
+                                        <option value="spanish">Испанский язык</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        Выбери курс, на который хочешь записаться.
+                                    </div>
+                                </div>
+
+                                <div class="form-check mb-4">
+                                    <input class="form-check-input" type="checkbox"
+                                        id="consent" name="consent" required>
+                                    <label class="form-check-label" for="consent">
+                                        Согласен на обработку персональных данных <span class="text-danger">*</span>
+                                    </label>
+                                    <div class="invalid-feedback">
+                                        Для отправки заявки необходимо согласие на обработку персональных данных.
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary btn-lg w-100">
+                                    Записаться на бесплатный урок
+                                </button>
+
+                                <div class="alert alert-success mt-4 mb-0 d-none" id="formSuccess" role="status" aria-live="polite">
+                                    <h3 class="h6 mb-2">Проверка пройдена</h3>
+                                    <p class="mb-0">
+                                        Все поля заполнены правильно. Сейчас форма проверяет данные в браузере.
+                                        Сохранение заявки в базе данных будет подключено на следующем этапе.
+                                    </p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5">
+                        <aside class="signup-info">
+                            <div class="signup-info-card p-4 p-md-5 mb-4">
+                                <p class="section-kicker mb-2">Как это работает</p>
+                                <h2 class="h3 mb-4">Всего три шага</h2>
+
+                                <div class="signup-step d-flex gap-3 mb-4">
+                                    <span class="step-number">1</span>
+                                    <div>
+                                        <h3 class="h6 mb-1">Оставь заявку</h3>
+                                        <p class="text-secondary mb-0">Укажи контакты и выбери интересующий язык.</p>
+                                    </div>
+                                </div>
+
+                                <div class="signup-step d-flex gap-3 mb-4">
+                                    <span class="step-number">2</span>
+                                    <div>
+                                        <h3 class="h6 mb-1">Дождись звонка</h3>
+                                        <p class="text-secondary mb-0">Менеджер уточнит удобное время и детали занятия.</p>
+                                    </div>
+                                </div>
+
+                                <div class="signup-step d-flex gap-3">
+                                    <span class="step-number">3</span>
+                                    <div>
+                                        <h3 class="h6 mb-1">Познакомься с преподавателем</h3>
+                                        <p class="text-secondary mb-0">На пробном уроке сможешь задать вопросы и оценить формат обучения.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="signup-contact p-4">
+                                <h2 class="h5 mb-3">Остались вопросы?</h2>
+                                <p class="text-secondary mb-2">Позвони или напиши нам:</p>
+                                <p class="mb-1"><a href="tel:+79000000000">+7 (900) 000-00-00</a></p>
+                                <p class="mb-0"><a href="mailto:info@example.com">info@example.com</a></p>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer py-4">
         <div class="container">
-            <a class="navbar-brand fw-semibold" href="index.html">Языковой портал</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Открыть меню"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="mainNavbar">
-                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
-                    <li class="nav-item"><a class="nav-link" href="courses.html">Курсы</a></li>
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="signup.html">Бесплатный урок</a></li>
-                </ul>
+            <div class="row g-3 align-items-center">
+                <div class="col-md-4">
+                    <a class="footer-brand" href="index.html">Языковой портал</a>
+                </div>
+                <div class="col-md-4 text-md-center">
+                    <span class="text-white-50">Учимся общаться без границ</span>
+                </div>
+                <div class="col-md-4 text-md-end">
+                    <span class="text-white-50">© <span id="currentYear"></span> Языковой портал</span>
+                </div>
             </div>
         </div>
-    </nav>
-    <main class="container py-5">
-        <p class="section-kicker mb-2">Первое занятие</p>
-        <h1 class="mb-3">Запись на бесплатный урок</h1>
-        <p class="text-secondary">Форму записи добавим после настройки основных страниц.</p>
-        <a class="btn btn-primary" href="index.html">На главную</a>
-    </main>
+    </footer>
+
     <script src="bootstrap/js/bootstrap.bundle.min.js" defer></script>
     <script src="js/main.js" defer></script>
+    <script src="js/form.js" defer></script>
 </body>
 </html>
