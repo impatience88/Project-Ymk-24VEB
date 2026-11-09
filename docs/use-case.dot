@@ -1,0 +1,57 @@
+digraph UseCases {
+  graph [rankdir=LR, bgcolor="white", pad="0.35", nodesep="0.55", ranksep="0.85", splines=ortho, fontname="Arial", fontsize=20, labelloc="t", label="Диаграмма прецедентов школы «Языковой портал»"];
+  node [fontname="Arial", fontsize=12, color="#315477", fontcolor="#243447"];
+  edge [fontname="Arial", fontsize=10, color="#64748b", arrowsize=0.75];
+
+  client [shape=box, style="rounded,filled", fillcolor="#eaf3ff", color="#2b6cb0", label="Клиент / слушатель\n<<actor>>", margin="0.18,0.12"];
+  manager [shape=box, style="rounded,filled", fillcolor="#fff3df", color="#c47b16", label="Менеджер\n<<actor>>", margin="0.18,0.12"];
+
+  subgraph cluster_system {
+    label="Информационная система школы «Языковой портал»";
+    labelloc="t";
+    fontsize=15;
+    fontname="Arial";
+    style="rounded";
+    color="#8aa6c1";
+    penwidth=1.4;
+    bgcolor="#f8fbff";
+    margin=24;
+
+    view_courses [shape=ellipse, style=filled, fillcolor="#ffffff", label="Просмотреть курсы"];
+    trial_apply [shape=ellipse, style=filled, fillcolor="#ffffff", label="Оставить заявку\nна бесплатный урок"];
+    paid_apply [shape=ellipse, style=filled, fillcolor="#ffffff", label="Подать заявку\nна платный курс"];
+    provide_payment [shape=ellipse, style=filled, fillcolor="#ffffff", label="Передать платёжный\nдокумент"];
+    clarify [shape=ellipse, style=filled, fillcolor="#ffffff", label="Уточнить детали заявки\nпо телефону"];
+    verify_payment [shape=ellipse, style=filled, fillcolor="#ffffff", label="Проверить оплату"];
+    enroll [shape=ellipse, style=filled, fillcolor="#ffffff", label="Записать слушателя\nна курс"];
+    manage_groups [shape=ellipse, style=filled, fillcolor="#ffffff", label="Вести учёт слушателей\nи учебных групп"];
+    send_notice [shape=ellipse, style=filled, fillcolor="#ffffff", label="Отправить уведомление\nо переносе или отмене"];
+    receive_notice [shape=ellipse, style=filled, fillcolor="#ffffff", label="Получить уведомление\nоб изменении занятия"];
+    issue_certificate [shape=ellipse, style=filled, fillcolor="#ffffff", label="Оформить сертификат"];
+    receive_certificate [shape=ellipse, style=filled, fillcolor="#ffffff", label="Получить сертификат"];
+
+    {rank=same; view_courses; trial_apply; paid_apply; provide_payment;}
+    {rank=same; clarify; verify_payment; enroll;}
+    {rank=same; manage_groups; send_notice; issue_certificate;}
+  }
+
+  client -> view_courses [dir=none];
+  client -> trial_apply [dir=none];
+  client -> paid_apply [dir=none];
+  client -> provide_payment [dir=none];
+  client -> receive_notice [dir=none];
+  client -> receive_certificate [dir=none];
+
+  manager -> clarify [dir=none];
+  manager -> verify_payment [dir=none];
+  manager -> enroll [dir=none];
+  manager -> manage_groups [dir=none];
+  manager -> send_notice [dir=none];
+  manager -> issue_certificate [dir=none];
+
+  paid_apply -> clarify [style=dashed, arrowhead=vee, label="после заявки"];
+  provide_payment -> verify_payment [style=dashed, arrowhead=vee, label="передача документа"];
+  verify_payment -> enroll [style=dashed, arrowhead=vee, label="после проверки"];
+  issue_certificate -> receive_certificate [style=dashed, arrowhead=vee];
+  send_notice -> receive_notice [style=dashed, arrowhead=vee];
+}

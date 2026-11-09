@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1840" height="1120" viewBox="0 0 1840 1120">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<style>text{font-family:Arial,sans-serif;fill:#243447}.title{font-size:30px;font-weight:700}.classbox{fill:#fff;stroke:#245b91;stroke-width:2}.classhead{fill:#eaf3ff}.managerbox{fill:#fff;stroke:#b7791f;stroke-width:2}.managerhead{fill:#fff3df}.classname{font-size:18px;font-weight:700;text-anchor:middle}.attr{font-size:15px}.relation{fill:none;stroke:#647b91;stroke-width:2}.managed{fill:none;stroke:#b7791f;stroke-width:2;stroke-dasharray:8 6}.mult{font-size:14px;font-weight:700;fill:#334155}.reltext{font-size:13px;fill:#64748b}</style>
+<text x="920" y="48" text-anchor="middle" class="title">Диаграмма классов школы «Языковой портал»</text>
+
+<path d="M230 290 L230 430" class="relation"/>
+<text x="244" y="310" class="mult">1</text><text x="244" y="420" class="mult">0..*</text>
+<path d="M570 190 L470 190 L470 525 L390 525" class="relation"/>
+<text x="548" y="180" class="mult">1</text><text x="397" y="515" class="mult">0..*</text>
+<path d="M390 240 L490 240 L490 475 L570 475" class="relation"/>
+<text x="398" y="228" class="mult">1</text><text x="544" y="465" class="mult">0..*</text>
+<path d="M730 290 L730 430" class="relation"/>
+<text x="744" y="310" class="mult">1</text><text x="744" y="420" class="mult">0..*</text>
+<path d="M890 200 L1010 200 L1010 475 L1140 475" class="relation"/>
+<text x="900" y="188" class="mult">1</text><text x="1110" y="465" class="mult">0..*</text>
+<path d="M1140 535 L890 535" class="relation"/>
+<text x="1110" y="523" class="mult">1</text><text x="900" y="523" class="mult">0..*</text>
+<path d="M650 620 L650 700 L390 700 L390 865 L390 865" class="relation"/>
+<text x="660" y="640" class="mult">1</text><text x="397" y="850" class="mult">0..1</text>
+<path d="M1140 585 L1020 585 L1020 870 L890 870" class="relation"/>
+<text x="1110" y="573" class="mult">1</text><text x="900" y="858" class="mult">0..*</text>
+<path d="M890 585 L1010 585 L1010 870 L1140 870" class="relation"/>
+<text x="900" y="573" class="mult">1</text><text x="1110" y="858" class="mult">0..1</text>
+<path d="M890 825 L1020 740 L1500 550" class="managed"/>
+<text x="1160" y="700" class="reltext">изменение занятия</text>
+<path d="M1300 260 L1300 430" class="managed"/>
+<text x="1313" y="345" class="reltext">ведёт учёт</text>
+<path d="M1140 220 L1030 220 L1030 390 L890 475" class="managed"/>
+<text x="944" y="240" class="reltext">оформляет</text>
+<path d="M1460 180 L1640 180 L1640 430" class="managed"/>
+<text x="1530" y="168" class="reltext">отправляет</text>
+<rect x="70" y="100" width="320" height="190" rx="2" class="classbox"/>
+<rect x="70" y="100" width="320" height="44" class="classhead"/>
+<text x="230.0" y="128" class="classname">Клиент</text>
+<text x="86" y="172" class="attr">clientId: int</text>
+<text x="86" y="200" class="attr">fullName: string</text>
+<text x="86" y="228" class="attr">phone: string</text>
+<text x="86" y="256" class="attr">email: string</text>
+<rect x="570" y="100" width="320" height="190" rx="2" class="classbox"/>
+<rect x="570" y="100" width="320" height="44" class="classhead"/>
+<text x="730.0" y="128" class="classname">Курс</text>
+<text x="586" y="172" class="attr">courseId: int</text>
+<text x="586" y="200" class="attr">title: string</text>
+<text x="586" y="228" class="attr">description: string</text>
+<text x="586" y="256" class="attr">basePrice: decimal</text>
+<rect x="1140" y="100" width="320" height="160" rx="2" class="managerbox"/>
+<rect x="1140" y="100" width="320" height="44" class="managerhead"/>
+<text x="1300.0" y="128" class="classname">Менеджер</text>
+<text x="1156" y="172" class="attr">managerId: int</text>
+<text x="1156" y="200" class="attr">fullName: string</text>
+<text x="1156" y="228" class="attr">email: string</text>
+<rect x="70" y="430" width="320" height="190" rx="2" class="classbox"/>
+<rect x="70" y="430" width="320" height="44" class="classhead"/>
+<text x="230.0" y="458" class="classname">Заявка на бесплатный урок</text>
+<text x="86" y="502" class="attr">applicationId: int</text>
+<text x="86" y="530" class="attr">createdAt: datetime</text>
+<text x="86" y="558" class="attr">status: string</text>
+<text x="86" y="586" class="attr">consent: boolean</text>
+<rect x="570" y="430" width="320" height="190" rx="2" class="classbox"/>
+<rect x="570" y="430" width="320" height="44" class="classhead"/>
+<text x="730.0" y="458" class="classname">Запись на курс</text>
+<text x="586" y="502" class="attr">enrollmentId: int</text>
+<text x="586" y="530" class="attr">enrollmentDate: date</text>
+<text x="586" y="558" class="attr">status: string</text>
+<rect x="1140" y="430" width="320" height="190" rx="2" class="classbox"/>
+<rect x="1140" y="430" width="320" height="44" class="classhead"/>
+<text x="1300.0" y="458" class="classname">Учебная группа</text>
+<text x="1156" y="502" class="attr">groupId: int</text>
+<text x="1156" y="530" class="attr">groupName: string</text>
+<text x="1156" y="558" class="attr">schedule: string</text>
+<text x="1156" y="586" class="attr">capacity: int</text>
+<rect x="70" y="790" width="320" height="190" rx="2" class="classbox"/>
+<rect x="70" y="790" width="320" height="44" class="classhead"/>
+<text x="230.0" y="818" class="classname">Платёжный документ</text>
+<text x="86" y="862" class="attr">documentId: int</text>
+<text x="86" y="890" class="attr">fileName: string</text>
+<text x="86" y="918" class="attr">paymentDate: date</text>
+<text x="86" y="946" class="attr">amount: decimal</text>
+<rect x="570" y="790" width="320" height="160" rx="2" class="classbox"/>
+<rect x="570" y="790" width="320" height="44" class="classhead"/>
+<text x="730.0" y="818" class="classname">Занятие</text>
+<text x="586" y="862" class="attr">lessonId: int</text>
+<text x="586" y="890" class="attr">lessonDate: datetime</text>
+<text x="586" y="918" class="attr">status: string</text>
+<rect x="1140" y="790" width="320" height="160" rx="2" class="classbox"/>
+<rect x="1140" y="790" width="320" height="44" class="classhead"/>
+<text x="1300.0" y="818" class="classname">Сертификат</text>
+<text x="1156" y="862" class="attr">certificateId: int</text>
+<text x="1156" y="890" class="attr">number: string</text>
+<text x="1156" y="918" class="attr">issueDate: date</text>
+<rect x="1500" y="430" width="300" height="190" rx="2" class="classbox"/>
+<rect x="1500" y="430" width="300" height="44" class="classhead"/>
+<text x="1650.0" y="458" class="classname">Email-уведомление</text>
+<text x="1516" y="502" class="attr">notificationId: int</text>
+<text x="1516" y="530" class="attr">message: string</text>
+<text x="1516" y="558" class="attr">sentAt: datetime</text>
+<text x="1516" y="586" class="attr">type: string</text>
+<rect x="70" y="1030" width="1730" height="54" rx="9" fill="#f6f8fb" stroke="#cbd5e1"/>
+<text x="90" y="1052" font-size="14" font-weight="700">Примечание:</text>
+<text x="190" y="1052" font-size="14">0..* — может быть ни одной или несколько записей; 0..1 — связь необязательная.</text>
+<text x="90" y="1073" font-size="13" fill="#64748b">Модель отражает процессы школы из технического задания. Текущая SQLite-база сайта пока хранит заявки на бесплатный урок.</text>
+</svg>

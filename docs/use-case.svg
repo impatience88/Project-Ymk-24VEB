@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="990" viewBox="0 0 1680 990">
+<rect width="100%" height="100%" fill="#fff"/>
+<style>text{font-family:Arial,sans-serif;fill:#243447}.title{font-size:30px;font-weight:700}.uc{fill:#fff;stroke:#245b91;stroke-width:2}.uct{font-size:16px;text-anchor:middle}.assoc{fill:none;stroke:#71869b;stroke-width:2}.actor-label{font-size:17px;font-weight:700;text-anchor:middle}</style>
+<text x="840" y="48" text-anchor="middle" class="title">Диаграмма прецедентов школы «Языковой портал»</text>
+<rect x="230" y="85" width="1210" height="835" rx="22" fill="#f7faff" stroke="#9bb4cc" stroke-width="2.5"/>
+<text x="835" y="123" text-anchor="middle" font-size="21" font-weight="700">Информационная система школы «Языковой портал»</text>
+
+<circle cx="105" cy="445" r="18" fill="#fff" stroke="#245b91" stroke-width="3"/>
+<path d="M105 463 L105 520 M76 490 L134 490 M105 520 L81 555 M105 520 L129 555" fill="none" stroke="#245b91" stroke-width="3.5" stroke-linecap="round"/>
+<text x="105" y="588" class="actor-label">Клиент / слушатель</text>
+<circle cx="1575" cy="445" r="18" fill="#fff" stroke="#b7791f" stroke-width="3"/>
+<path d="M1575 463 L1575 520 M1546 490 L1604 490 M1575 520 L1551 555 M1575 520 L1599 555" fill="none" stroke="#b7791f" stroke-width="3.5" stroke-linecap="round"/>
+<text x="1575" y="588" class="actor-label">Менеджер</text>
+<path d="M105 500 L205 500 M205 190 L205 850" class="assoc"/>
+<path d="M1575 500 L1460 500 M1460 190 L1460 850" class="assoc"/>
+<path d="M205 205 L370 205" class="assoc"/>
+<ellipse cx="510" cy="205" rx="140.0" ry="36.0" class="uc"/>
+<text x="510" y="211" class="uct">Просмотреть список курсов</text>
+<path d="M205 335 L370 335" class="assoc"/>
+<ellipse cx="510" cy="335" rx="140.0" ry="36.0" class="uc"/>
+<text x="510" y="341" class="uct">Оставить заявку на бесплатный урок</text>
+<path d="M205 465 L370 465" class="assoc"/>
+<ellipse cx="510" cy="465" rx="140.0" ry="36.0" class="uc"/>
+<text x="510" y="471" class="uct">Подать заявку на платный курс</text>
+<path d="M205 595 L370 595" class="assoc"/>
+<ellipse cx="510" cy="595" rx="140.0" ry="36.0" class="uc"/>
+<text x="510" y="601" class="uct">Передать платёжный документ</text>
+<path d="M205 725 L370 725" class="assoc"/>
+<ellipse cx="510" cy="725" rx="140.0" ry="36.0" class="uc"/>
+<text x="510" y="731" class="uct">Получить сертификат</text>
+<path d="M205 855 L370 855" class="assoc"/>
+<ellipse cx="510" cy="855" rx="140.0" ry="36.0" class="uc"/>
+<text x="510" y="861" class="uct">Получить email-уведомление</text>
+<path d="M1300 205 L1460 205" class="assoc"/>
+<ellipse cx="1120" cy="205" rx="180.0" ry="38.0" class="uc"/>
+<text x="1120" y="211" class="uct">Уточнить детали заявки по телефону</text>
+<path d="M1300 335 L1460 335" class="assoc"/>
+<ellipse cx="1120" cy="335" rx="180.0" ry="38.0" class="uc"/>
+<text x="1120" y="341" class="uct">Проверить платёжный документ</text>
+<path d="M1300 465 L1460 465" class="assoc"/>
+<ellipse cx="1120" cy="465" rx="180.0" ry="38.0" class="uc"/>
+<text x="1120" y="471" class="uct">Записать слушателя на курс</text>
+<path d="M1300 595 L1460 595" class="assoc"/>
+<ellipse cx="1120" cy="595" rx="180.0" ry="38.0" class="uc"/>
+<text x="1120" y="601" class="uct">Вести учёт слушателей и учебных групп</text>
+<path d="M1300 725 L1460 725" class="assoc"/>
+<ellipse cx="1120" cy="725" rx="180.0" ry="38.0" class="uc"/>
+<text x="1120" y="731" class="uct">Оформить сертификат по окончании курса</text>
+<path d="M1300 855 L1460 855" class="assoc"/>
+<ellipse cx="1120" cy="855" rx="180.0" ry="38.0" class="uc"/>
+<text x="1120" y="845" class="uct">
+<tspan x="1120" dy="0">Отправить email-рассылку о переносе</tspan>
+<tspan x="1120" dy="21">или отмене занятий</tspan>
+</text>
+<rect x="250" y="935" width="1180" height="34" rx="8" fill="#fff8eb" stroke="#e6c58d"/>
+<text x="840" y="957" text-anchor="middle" font-size="14" fill="#80551c">Платная запись: заявка клиента → звонок менеджера → оплата → запись на курс.</text>
+</svg>

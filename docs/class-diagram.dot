@@ -1,0 +1,110 @@
+digraph ClassDiagram {
+  graph [rankdir=TB, bgcolor="white", pad="0.35", nodesep="0.45", ranksep="0.75", splines=ortho, fontname="Arial", fontsize=20, labelloc="t", label="Диаграмма классов школы «Языковой портал»"];
+  node [shape=plain, fontname="Arial", fontsize=11, fontcolor="#243447"];
+  edge [fontname="Arial", fontsize=10, color="#52677d", fontcolor="#334155", arrowsize=0.75];
+
+  Client [label=<
+    <TABLE BORDER="1" COLOR="#4b79a8" CELLBORDER="0" CELLSPACING="0" CELLPADDING="7">
+      <TR><TD BGCOLOR="#eaf3ff"><B>Клиент</B></TD></TR>
+      <TR><TD ALIGN="LEFT">clientId: int</TD></TR>
+      <TR><TD ALIGN="LEFT">fullName: string</TD></TR>
+      <TR><TD ALIGN="LEFT">phone: string</TD></TR>
+      <TR><TD ALIGN="LEFT">email: string</TD></TR>
+    </TABLE>>];
+
+  Course [label=<
+    <TABLE BORDER="1" COLOR="#4b79a8" CELLBORDER="0" CELLSPACING="0" CELLPADDING="7">
+      <TR><TD BGCOLOR="#eaf3ff"><B>Курс</B></TD></TR>
+      <TR><TD ALIGN="LEFT">courseId: int</TD></TR>
+      <TR><TD ALIGN="LEFT">title: string</TD></TR>
+      <TR><TD ALIGN="LEFT">description: string</TD></TR>
+      <TR><TD ALIGN="LEFT">basePrice: decimal</TD></TR>
+    </TABLE>>];
+
+  Application [label=<
+    <TABLE BORDER="1" COLOR="#4b79a8" CELLBORDER="0" CELLSPACING="0" CELLPADDING="7">
+      <TR><TD BGCOLOR="#eaf3ff"><B>Заявка на бесплатный урок</B></TD></TR>
+      <TR><TD ALIGN="LEFT">applicationId: int</TD></TR>
+      <TR><TD ALIGN="LEFT">createdAt: datetime</TD></TR>
+      <TR><TD ALIGN="LEFT">status: string</TD></TR>
+      <TR><TD ALIGN="LEFT">consent: boolean</TD></TR>
+    </TABLE>>];
+
+  Enrollment [label=<
+    <TABLE BORDER="1" COLOR="#4b79a8" CELLBORDER="0" CELLSPACING="0" CELLPADDING="7">
+      <TR><TD BGCOLOR="#eaf3ff"><B>Запись на курс</B></TD></TR>
+      <TR><TD ALIGN="LEFT">enrollmentId: int</TD></TR>
+      <TR><TD ALIGN="LEFT">enrollmentDate: date</TD></TR>
+      <TR><TD ALIGN="LEFT">status: string</TD></TR>
+    </TABLE>>];
+
+  PaymentDocument [label=<
+    <TABLE BORDER="1" COLOR="#4b79a8" CELLBORDER="0" CELLSPACING="0" CELLPADDING="7">
+      <TR><TD BGCOLOR="#eaf3ff"><B>Платёжный документ</B></TD></TR>
+      <TR><TD ALIGN="LEFT">documentId: int</TD></TR>
+      <TR><TD ALIGN="LEFT">fileName: string</TD></TR>
+      <TR><TD ALIGN="LEFT">paymentDate: date</TD></TR>
+      <TR><TD ALIGN="LEFT">amount: decimal</TD></TR>
+    </TABLE>>];
+
+  StudyGroup [label=<
+    <TABLE BORDER="1" COLOR="#4b79a8" CELLBORDER="0" CELLSPACING="0" CELLPADDING="7">
+      <TR><TD BGCOLOR="#eaf3ff"><B>Учебная группа</B></TD></TR>
+      <TR><TD ALIGN="LEFT">groupId: int</TD></TR>
+      <TR><TD ALIGN="LEFT">groupName: string</TD></TR>
+      <TR><TD ALIGN="LEFT">schedule: string</TD></TR>
+      <TR><TD ALIGN="LEFT">capacity: int</TD></TR>
+    </TABLE>>];
+
+  Lesson [label=<
+    <TABLE BORDER="1" COLOR="#4b79a8" CELLBORDER="0" CELLSPACING="0" CELLPADDING="7">
+      <TR><TD BGCOLOR="#eaf3ff"><B>Занятие</B></TD></TR>
+      <TR><TD ALIGN="LEFT">lessonId: int</TD></TR>
+      <TR><TD ALIGN="LEFT">lessonDate: datetime</TD></TR>
+      <TR><TD ALIGN="LEFT">status: string</TD></TR>
+    </TABLE>>];
+
+  Certificate [label=<
+    <TABLE BORDER="1" COLOR="#4b79a8" CELLBORDER="0" CELLSPACING="0" CELLPADDING="7">
+      <TR><TD BGCOLOR="#eaf3ff"><B>Сертификат</B></TD></TR>
+      <TR><TD ALIGN="LEFT">certificateId: int</TD></TR>
+      <TR><TD ALIGN="LEFT">number: string</TD></TR>
+      <TR><TD ALIGN="LEFT">issueDate: date</TD></TR>
+    </TABLE>>];
+
+  Manager [label=<
+    <TABLE BORDER="1" COLOR="#bd842d" CELLBORDER="0" CELLSPACING="0" CELLPADDING="7">
+      <TR><TD BGCOLOR="#fff3df"><B>Менеджер</B></TD></TR>
+      <TR><TD ALIGN="LEFT">managerId: int</TD></TR>
+      <TR><TD ALIGN="LEFT">fullName: string</TD></TR>
+      <TR><TD ALIGN="LEFT">email: string</TD></TR>
+    </TABLE>>];
+
+  Notification [label=<
+    <TABLE BORDER="1" COLOR="#4b79a8" CELLBORDER="0" CELLSPACING="0" CELLPADDING="7">
+      <TR><TD BGCOLOR="#eaf3ff"><B>Email-уведомление</B></TD></TR>
+      <TR><TD ALIGN="LEFT">notificationId: int</TD></TR>
+      <TR><TD ALIGN="LEFT">message: string</TD></TR>
+      <TR><TD ALIGN="LEFT">sentAt: datetime</TD></TR>
+      <TR><TD ALIGN="LEFT">type: string</TD></TR>
+    </TABLE>>];
+
+  {rank=same; Client; Course; Manager;}
+  {rank=same; Application; Enrollment; StudyGroup;}
+  {rank=same; PaymentDocument; Lesson; Certificate; Notification;}
+
+  Client -> Application [dir=none, taillabel="1", headlabel="0..*", labeldistance=1.5];
+  Course -> Application [dir=none, taillabel="1", headlabel="0..*", labeldistance=1.5];
+  Client -> Enrollment [dir=none, taillabel="1", headlabel="0..*", labeldistance=1.5];
+  Course -> Enrollment [dir=none, taillabel="1", headlabel="0..*", labeldistance=1.5];
+  Enrollment -> PaymentDocument [dir=none, taillabel="1", headlabel="0..1", labeldistance=1.5];
+  Course -> StudyGroup [dir=none, taillabel="1", headlabel="0..*", labeldistance=1.5];
+  StudyGroup -> Enrollment [dir=none, taillabel="1", headlabel="0..*", labeldistance=1.5];
+  StudyGroup -> Lesson [dir=none, taillabel="1", headlabel="0..*", labeldistance=1.5];
+  Enrollment -> Certificate [dir=none, taillabel="1", headlabel="0..1", labeldistance=1.5];
+  Manager -> Application [dir=none, style=dashed, label="обрабатывает"];
+  Manager -> Enrollment [dir=none, style=dashed, label="оформляет"];
+  Manager -> StudyGroup [dir=none, style=dashed, label="ведёт учёт"];
+  Manager -> Notification [dir=none, label="отправляет"];
+  Lesson -> Notification [dir=none, style=dashed, label="изменение занятия"];
+}
