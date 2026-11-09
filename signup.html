@@ -74,7 +74,7 @@
                         <div class="signup-card p-4 p-md-5">
                             <h2 class="h3 mb-2">Заявка на бесплатный урок</h2>
                             <p class="text-secondary mb-4">
-                                Заполни все поля. Поля со звёздочкой обязательны.
+                                Заполни все поля. Заявка будет сохранена в базе данных.
                             </p>
 
                             <form id="signupForm" class="needs-validation" novalidate>
@@ -163,12 +163,13 @@
                                 </button>
 
                                 <div class="alert alert-success mt-4 mb-0 d-none" id="formSuccess" role="status" aria-live="polite">
-                                    <h3 class="h6 mb-2">Проверка пройдена</h3>
-                                    <p class="mb-0">
-                                        Все поля заполнены правильно. Сейчас форма проверяет данные в браузере.
-                                        Сохранение заявки в базе данных будет подключено на следующем этапе.
+                                    <h3 class="h6 mb-2">Заявка сохранена</h3>
+                                    <p class="mb-0" id="formSuccessText">
+                                        Данные успешно записаны в базу данных.
                                     </p>
                                 </div>
+
+                                <div class="alert alert-danger mt-3 mb-0 d-none" id="formError" role="alert" aria-live="assertive"></div>
                             </form>
                         </div>
                     </div>

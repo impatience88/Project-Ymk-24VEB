@@ -1,0 +1,13 @@
+{
+  "name": "yazykovoy-portal",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Сайт школы иностранных языков Языковой портал",
+  "scripts": {
+    "start": "node server/server.js",
+    "db:check": "node server/check-db.js"
+  },
+  "engines": {
+    "node": ">=22.13.0"
+  }
+}

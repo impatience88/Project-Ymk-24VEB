@@ -1,0 +1,12 @@
+Файлы для подключения серверной части:
+
+package.json
+server/server.js
+server/db.js
+server/check-db.js
+database/schema.sql
+js/form.js
+signup.html
+README-БЭКЕНД.txt
+
+Содержимое архива нужно скопировать поверх существующего проекта, сохранив текущие index.html, courses.html, CSS и Bootstrap.
