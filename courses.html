@@ -1,33 +1,334 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Курсы - Языковой портал</title>
+
+    <!-- Bootstrap 5.3.3 -->
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+    <!-- Общие стили сайта -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Стили страницы курсов -->
+    <link rel="stylesheet" href="css/courses.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark site-navbar">
+
+    <!-- Шапка сайта -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark site-navbar">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="index.html">Языковой портал</a>
+
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                    aria-controls="mainNavbar" aria-expanded="false" aria-label="Открыть меню">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="mainNavbar">
+                    <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Главная</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="courses.html">Курсы</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="signup.html">Бесплатный урок</a>
+                        </li>
+                        <li class="nav-item ms-lg-2">
+                            <a class="btn btn-light px-3" href="signup.html">Записаться</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Заголовок страницы -->
+        <section class="courses-heading py-5">
+            <div class="container">
+                <nav aria-label="Навигация по сайту">
+                    <ol class="breadcrumb mb-3">
+                        <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Курсы</li>
+                    </ol>
+                </nav>
+
+                <p class="section-kicker mb-2">Выбери направление</p>
+                <h1 class="display-5 fw-bold mb-3">Наши курсы</h1>
+                <p class="lead text-secondary mb-0">
+                    Изучай иностранный язык для работы, путешествий и общения.
+                    Можно выбрать подходящий тариф и удобное количество занятий.
+                </p>
+            </div>
+        </section>
+
+        <!-- Список курсов -->
+        <section class="pb-5">
+            <div class="container">
+                <div class="row align-items-end g-3 mb-4">
+                    <div class="col-md-7">
+                        <h2 class="h3 mb-1">Направления обучения</h2>
+                        <p class="text-secondary mb-0">Сейчас доступны четыре языковых курса.</p>
+                    </div>
+                    <div class="col-md-5">
+                        <label for="courseSearch" class="form-label">Поиск курса</label>
+                        <input type="search" class="form-control" id="courseSearch"
+                            placeholder="Например, английский" autocomplete="off">
+                    </div>
+                </div>
+
+                <div class="row g-4" id="courseList">
+                    <!-- Английский язык -->
+                    <div class="col-md-6 col-xl-3 course-item" data-course-name="английский english">
+                        <article class="card course-card h-100">
+                            <img src="images/english.jpg" class="card-img-top course-image"
+                                alt="Материалы для изучения английского языка">
+                            <div class="card-body d-flex flex-column p-4">
+                                <span class="badge text-bg-primary course-badge mb-3">Онлайн-курс</span>
+                                <h3 class="h5 card-title">Английский язык</h3>
+                                <p class="card-text text-secondary">
+                                    Интенсивный онлайн-курс для взрослых. Подойдёт тем,
+                                    кто хочет увереннее говорить на одном из самых
+                                    распространённых языков мира.
+                                </p>
+                                <div class="course-price mt-auto">От 500 ₽ <span>за занятие</span></div>
+                                <a href="signup.html?course=english" class="btn btn-outline-primary w-100 mt-3">
+                                    Записаться
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Китайский язык -->
+                    <div class="col-md-6 col-xl-3 course-item" data-course-name="китайский chinese">
+                        <article class="card course-card h-100">
+                            <img src="images/chinese.jpg" class="card-img-top course-image"
+                                alt="Иероглифы на доске для изучения китайского языка">
+                            <div class="card-body d-flex flex-column p-4">
+                                <span class="badge text-bg-primary course-badge mb-3">Онлайн-курс</span>
+                                <h3 class="h5 card-title">Китайский язык</h3>
+                                <p class="card-text text-secondary">
+                                    Интенсивный онлайн-курс для тех, кто хочет научиться
+                                    свободно общаться на китайском языке и познакомиться
+                                    с другой культурой.
+                                </p>
+                                <div class="course-price mt-auto">От 700 ₽ <span>за занятие</span></div>
+                                <a href="signup.html?course=chinese" class="btn btn-outline-primary w-100 mt-3">
+                                    Записаться
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Итальянский язык -->
+                    <div class="col-md-6 col-xl-3 course-item" data-course-name="итальянский italian">
+                        <article class="card course-card h-100">
+                            <img src="images/italian.png" class="card-img-top course-image"
+                                alt="Итальянская тематика и материалы для изучения языка">
+                            <div class="card-body d-flex flex-column p-4">
+                                <span class="badge text-bg-primary course-badge mb-3">Для путешествий</span>
+                                <h3 class="h5 card-title">Итальянский язык</h3>
+                                <p class="card-text text-secondary">
+                                    Курс для тех, кто собирается в Италию, Швейцарию,
+                                    Сан-Марино или Ватикан и хочет увереннее чувствовать
+                                    себя во время поездки.
+                                </p>
+                                <div class="course-price mt-auto">От 650 ₽ <span>за занятие</span></div>
+                                <a href="signup.html?course=italian" class="btn btn-outline-primary w-100 mt-3">
+                                    Записаться
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Испанский язык -->
+                    <div class="col-md-6 col-xl-3 course-item" data-course-name="испанский spanish">
+                        <article class="card course-card h-100">
+                            <img src="images/spanish.jpg" class="card-img-top course-image"
+                                alt="Материалы для изучения испанского языка">
+                            <div class="card-body d-flex flex-column p-4">
+                                <span class="badge text-bg-primary course-badge mb-3">Онлайн-курс</span>
+                                <h3 class="h5 card-title">Испанский язык</h3>
+                                <p class="card-text text-secondary">
+                                    Интенсивный онлайн-курс для тех, кто хочет свободнее
+                                    говорить по-испански и лучше понимать речь.
+                                </p>
+                                <div class="course-price mt-auto">От 600 ₽ <span>за занятие</span></div>
+                                <a href="signup.html?course=spanish" class="btn btn-outline-primary w-100 mt-3">
+                                    Записаться
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <p id="noCoursesMessage" class="alert alert-warning mt-4 d-none" role="status">
+                    По вашему запросу курсы не найдены. Попробуйте изменить запрос.
+                </p>
+            </div>
+        </section>
+
+        <!-- Тарифы -->
+        <section class="tariffs-section py-5">
+            <div class="container">
+                <div class="text-center mb-4">
+                    <p class="section-kicker mb-2">Условия обучения</p>
+                    <h2 class="h2">Выбери тариф</h2>
+                    <p class="text-secondary mb-0">У каждого тарифа свои условия.</p>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table table-bordered align-middle tariff-table mb-0">
+                        <thead>
+                            <tr>
+                                <th scope="col">Тариф</th>
+                                <th scope="col">Особенности</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Выгодный</th>
+                                <td>Дешевле, но без отмен и переносов занятий.</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Комфортный</th>
+                                <td>Дороже, но можно отменять уроки.</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Усиленный</th>
+                                <td>Избранные преподаватели и сопровождение методиста.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Калькулятор -->
+        <section class="py-5" id="calculator">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-9 col-xl-8">
+                        <div class="calculator-card p-4 p-md-5">
+                            <div class="mb-4">
+                                <p class="section-kicker mb-2">Планирование обучения</p>
+                                <h2 class="h2 mb-2">Калькулятор стоимости</h2>
+                                <p class="text-secondary mb-0">
+                                    Выбери язык, тариф и количество занятий, чтобы узнать примерную стоимость за месяц.
+                                </p>
+                            </div>
+
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="calcCourse" class="form-label">Курс</label>
+                                    <select class="form-select" id="calcCourse">
+                                        <option value="english">Английский язык</option>
+                                        <option value="chinese" selected>Китайский язык</option>
+                                        <option value="italian">Итальянский язык</option>
+                                        <option value="spanish">Испанский язык</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="calcTariff" class="form-label">Тариф</label>
+                                    <select class="form-select" id="calcTariff">
+                                        <option value="economy">Выгодный</option>
+                                        <option value="comfort" selected>Комфортный</option>
+                                        <option value="intensive">Усиленный</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="calcDuration" class="form-label">Продолжительность занятия</label>
+                                    <select class="form-select" id="calcDuration">
+                                        <option value="45">45 минут</option>
+                                        <option value="60" selected>60 минут</option>
+                                        <option value="90">90 минут</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <label for="calcLessons" class="form-label">Занятий в месяц</label>
+                                        <span class="badge text-bg-primary" id="lessonsValue">10</span>
+                                    </div>
+                                    <input type="range" class="form-range" id="calcLessons"
+                                        min="8" max="15" step="1" value="10">
+                                    <div class="d-flex justify-content-between small text-secondary">
+                                        <span>8 занятий</span>
+                                        <span>15 занятий</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="duration-note mt-3">
+                                Продолжительность занятия можно выбрать для планирования расписания.
+                                В приложении преподавателя стоимость указана за одно занятие без отдельной надбавки за длительность,
+                                поэтому она не меняет итоговый расчёт.
+                            </div>
+
+                            <div class="calculation-result mt-4 p-4">
+                                <div class="row align-items-center g-3">
+                                    <div class="col-md-7">
+                                        <p class="text-secondary mb-1">Стоимость одного занятия</p>
+                                        <div class="h4 mb-3" id="pricePerLesson">760 ₽</div>
+                                        <p class="small text-secondary mb-0" id="calculationFormula">
+                                            760 ₽ × 10 занятий
+                                        </p>
+                                    </div>
+                                    <div class="col-md-5 text-md-end">
+                                        <p class="text-secondary mb-1">Примерная стоимость за месяц</p>
+                                        <output class="total-price" id="totalPrice" aria-live="polite">7 600 ₽</output>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a href="signup.html?course=chinese" id="calculatorSignup"
+                                class="btn btn-primary btn-lg w-100 mt-4">
+                                Записаться на бесплатный урок
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer class="site-footer py-4">
         <div class="container">
-            <a class="navbar-brand fw-semibold" href="index.html">Языковой портал</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Открыть меню"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="mainNavbar">
-                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="courses.html">Курсы</a></li>
-                    <li class="nav-item"><a class="nav-link" href="signup.html">Бесплатный урок</a></li>
-                </ul>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h2 class="h5">Языковой портал</h2>
+                    <p class="text-white-50 mb-0">Учимся общаться без границ.</p>
+                </div>
+                <div class="col-md-4">
+                    <h2 class="h5">Контакты</h2>
+                    <p class="text-white-50 mb-1">Адрес: г. Москва, ул. Примерная, 10</p>
+                    <p class="text-white-50 mb-1">Телефон: +7 (900) 000-00-00</p>
+                    <p class="text-white-50 mb-0">Email: info@example.com</p>
+                </div>
+                <div class="col-md-4">
+                    <h2 class="h5">Навигация</h2>
+                    <a href="index.html" class="footer-link">Главная</a><br>
+                    <a href="signup.html" class="footer-link">Бесплатный урок</a>
+                </div>
+            </div>
+            <hr class="border-secondary my-4">
+            <div class="text-center text-white-50">
+                © <span id="currentYear"></span> Языковой портал. Все права защищены.
             </div>
         </div>
-    </nav>
-    <main class="container py-5">
-        <p class="section-kicker mb-2">Направления обучения</p>
-        <h1 class="mb-3">Наши курсы</h1>
-        <p class="text-secondary">Страница будет заполнена карточками курсов и калькулятором на следующем этапе.</p>
-        <a class="btn btn-primary" href="index.html">На главную</a>
-    </main>
+    </footer>
+
     <script src="bootstrap/js/bootstrap.bundle.min.js" defer></script>
     <script src="js/main.js" defer></script>
+    <script src="js/calculator.js" defer></script>
 </body>
 </html>
